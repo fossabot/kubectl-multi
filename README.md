@@ -4,15 +4,7 @@ A Google Cloud Build image that can be used to run a kubectl command in each zon
 
 ## How to use
 
-In this folder, build the container using `gcloud`
-
-```
-gcloud builds submit
-```
-
-(Public image for use coming soon)
-
-Once built, use the new image in your project's `cloudbuild.yaml` file.
+Use the new image in your project's `cloudbuild.yaml` file.
 
 ```
 - name: 'securenomad/kubectl-multi'
