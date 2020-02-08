@@ -1,6 +1,6 @@
 # SecureNomad/kubectl-multi
 
-A Google Cloud Build image that can be used to run a kubectl command in each zone that contains a kubernetes cluster. Templating is supported to allow for zones to be used for things like hostnames.
+A Google Cloud Build image that can be used to run a kubectl command in each zone that contains a Kubernetes cluster. Templating is supported to allow for zones to be used for things like hostnames. I built this as a way to use Google Cloud Build to deploy to multiple clusters in a project without having to set up Kubernetes Cluster Federation.
 
 ## How to use
 
@@ -15,7 +15,7 @@ gcloud builds submit
 Once built, use the new image in your project's `cloudbuild.yaml` file.
 
 ```
-- name: 'gcr.io/${PROJECT_ID}/kubectl-multi'
+- name: 'securenomad/kubectl-multi'
   args: ['get', 'all']
 ```
 
@@ -38,7 +38,7 @@ Templating can be used when certain parts if a deployment are variable based on 
 In your `cloudbuild.yaml` file specify the TEMPLATE_FILE env variable
 
 ```
-- name: 'gcr.io/${PROJECT_ID}/kubectl-multi'
+- name: 'securenomad/kubectl-multi'
   id: Deploy Services
   args: ['apply', '-f', 'service.yaml']
   env:
