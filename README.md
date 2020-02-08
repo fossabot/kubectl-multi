@@ -1,4 +1,4 @@
-# SecureNomad/kubectl-multi
+# securenomad/kubectl-multi
 
 A Google Cloud Build image that can be used to run a kubectl command in each zone that contains a Kubernetes cluster. Templating is supported to allow for zones to be used for things like hostnames. I built this as a way to use Google Cloud Build to deploy to multiple clusters in a project without having to set up Kubernetes Cluster Federation.
 
