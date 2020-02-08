@@ -4,7 +4,7 @@ A Google Cloud Build image that can be used to run a kubectl command in each zon
 
 ## How to use
 
-Use the new image in your project's `cloudbuild.yaml` file.
+Instead of using `gcr.io/cloud-builders/kubectl` you can use this image in any cloudbuild.yaml file.
 
 ```
 - name: 'securenomad/kubectl-multi'
@@ -20,6 +20,8 @@ Zones are retrieved using this command
 ```
 gcloud container clusters list --format="value(zone)"
 ```
+
+Then for each zone, the correct zone and cluster env vars are set and sent to the original `cloud-builders/kubectl` command.
 
 ## Templating
 
