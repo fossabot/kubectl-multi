@@ -1,4 +1,6 @@
 # securenomad/kubectl-multi
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsecurenomad%2Fkubectl-multi.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsecurenomad%2Fkubectl-multi?ref=badge_shield)
+
 
 A Google Cloud Build image that can be used to run a kubectl command in each zone that contains a Kubernetes cluster. Templating is supported to allow for zones to be used for things like hostnames. I built this as a way to use Google Cloud Build to deploy to multiple clusters in a project without having to set up Kubernetes Cluster Federation.
 
@@ -59,3 +61,7 @@ Like this
 annotations:
     external-dns.alpha.kubernetes.io/hostname: us-east1-b.example.com
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsecurenomad%2Fkubectl-multi.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsecurenomad%2Fkubectl-multi?ref=badge_large)
